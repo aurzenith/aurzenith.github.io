@@ -10,6 +10,7 @@ class customNavbar extends HTMLElement {
                     <a href="#">Projects</a>
                     <ul class="dropdown">
                         <li>
+                        <a href="https://github.com/aurzenith/A-Simple-Web-Server">Web Server</a>
                         </li>
                     </ul>
                 </li>

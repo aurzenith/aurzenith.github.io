@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurzenith</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -13,9 +13,25 @@
 
     <h1>Photography</h1>
 
-    <main>
-        <h3>Will add some film photos + info on each later..</h3>
-    </main>
+    <div id="gallery"></div>
+    <script>
+        fetch('images.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                // Inject the HTML into the placeholder div
+                document.getElementById('gallery').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading gallery:', error);
+                document.getElementById('gallery').innerHTML = '<p>Error loading gallery. (Make sure you are running a local server!)</p>';
+            });
+    </script>
+
 
     <script src=".././navbar.js"></script>
 </body>
