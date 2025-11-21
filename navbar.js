@@ -20,6 +20,8 @@ class customNavbar extends HTMLElement {
                 <li>
                     <a href="/readme/">Readme</a>
                 </li>
+                <li>
+                    <a href="https://github.com/aurzenith/">Github</a>
             
             </ul>
         </nav> `
