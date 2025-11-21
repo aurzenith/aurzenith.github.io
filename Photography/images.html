@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.subtitle {
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+            display: inline-block;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .gallery-container {
+            width: 100%;
+            max-width: 1400px;
+            column-count: 3; 
+            column-gap: 40px;
+        }
+
+   
+        .photo-frame {
+            position: relative; 
+            break-inside: avoid;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            overflow: hidden; 
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(20%);
+            transition: transform 0.6s ease, filter 0.3s ease;
+        }
+
+
+        .photo-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; 
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+
+        .photo-frame:hover .photo-info {
+            opacity: 1;
+        }
+
+        .photo-frame:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%); 
+        }
+
+
+        .info-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .info-details {
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1000px) {
+            .gallery-container {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-container {
+                column-count: 1;
+            }
+            body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+
+
+        <div class="photo-frame">
+            <img src="images/train.jpg" alt="Train">
+            <div class="photo-info">
+                <div class="info-title">Train</div>
+                <div class="info-details">
+                    Nikon Nikkor<br>
+                    55mm f/2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <img src="images/fish.png" alt="Fish">
+            <div class="photo-info">
+                <div class="info-title">Fish</div>
+                <div class="info-details">
+                    Nikon F5<br>
+                    24mm f/2.8<br>
+                    Portra 400?
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <img src="images/headshot.jpg" alt="Headshot">
+            <div class="photo-info">
+                <div class="info-title">Headshot</div>
+                <div class="info-details">
+                    Nikon Nikkor EL<br>
+                    55mm f2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <img src="images/photographer.jpg" alt="Photographer">
+            <div class="photo-info">
+                <div class="info-title">Photographer</div>
+                <div class="info-details">
+                    Nikon Nikkor EL<br>
+                    55mm f2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <img src="images/shoes.jpg" alt="Shoes">
+            <div class="photo-info">
+                <div class="info-title">Shoes</div>
+                <div class="info-details">
+                    Nikon Nikkor EL<br>
+                    55mm f2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <img src="images/skaters.jpg" alt="Skaters">
+            <div class="photo-info">
+                <div class="info-title">Skaters</div>
+                <div class="info-details">
+                    Nikon Nikkor EL<br>
+                    55mm f2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <img src="images/track.jpg" alt="Track">
+            <div class="photo-info">
+                <div class="info-title">Track</div>
+                <div class="info-details">
+                    Nikon Nikkor EL<br>
+                    55mm f/2.8<br>
+                    Kodak Gold 200
+                </div>
+            </div>
+        </div>
+    </div>   
+
+</body>
+</html>
